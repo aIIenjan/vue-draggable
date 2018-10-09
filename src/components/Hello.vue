@@ -1,7 +1,6 @@
 <template>
   <div class="content-wrap">
     <h1 style="text-align: center;">拖动到指定div，限定拖动个数</h1>
-    <template>
       <div class='drag-content'>
         <div class='project-content'>
           <div class='select-item' draggable='true' @dragstart='drag($event)' v-for='pjdt in projectdatas'>{{pjdt.name}}</div>
@@ -14,8 +13,6 @@
           </div>
         </div>
       </div>
-    </template>
-
   </div>
 </template>
 
