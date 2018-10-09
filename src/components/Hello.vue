@@ -6,7 +6,7 @@
           <div class='select-item' draggable='true' @dragstart='drag($event)' v-for='pjdt in projectdatas'>{{pjdt.name}}</div>
         </div>
         <div class='people-content'>
-          <div class='drag-div' v-for='(ppindex,ppdt) in peopledata' @drop='drop($event, ppindex)' @dragover='allowDrop($event)' :class="ppindex? 'dragDiv_'+ppindex.id : ''">
+          <div class='drag-div' v-for='(ppindex,ppdt) in peopledata' @drop='drop($event, ppindex)' @dragover='allowDrop($event)' :class="ppindex ? 'dragDiv_'+ppindex.id : ''">
             <div class='select-project-item'>
               <label class='drag-people-label'>{{ppindex.name}}：</label>
             </div>
@@ -23,9 +23,6 @@ import $ from 'jquery'
 export default {
   data() {
     return {
-     tags: [
-      { id: '1', name: '第一个' },
-      { id: '2', name: '第二个' }],
       projectdatas: [
         { id: '1', name: '葡萄', },
         { id: '2', name: '芒果', },
